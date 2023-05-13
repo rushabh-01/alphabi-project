@@ -3,6 +3,8 @@
 import { useEffect } from 'react';
 import Searchbar from '@/component/Searchbar';
 import styles from './page.module.css';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
 
 function disableBackButton() {
   window.history.pushState(null, '', window.location.href);
@@ -14,6 +16,14 @@ function handlePopstate() {
 }
 
 export default function Dashboard() {
+  const router = useRouter();
+  const { user } = useAuth();
+  
+  useEffect(() => {
+    if (!user) {
+      router.push('/login');
+    }
+  }, [user]);
   useEffect(() => {
     disableBackButton();
     return () => {
@@ -28,3 +38,5 @@ export default function Dashboard() {
     </div>
   );
 }
+
+
