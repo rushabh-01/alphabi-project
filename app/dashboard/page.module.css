@@ -1,0 +1,17 @@
+.container{
+    background: white;
+    height: 600px;
+    border-radius: 20px ;
+    margin: 0 72px ;
+    position: relative;
+}
+
+/* responsive design */
+
+@media (max-width:1000px){
+    .container{
+        margin: 0 10px;
+        height: auto !important;
+        overflow: auto;
+    }
+}
