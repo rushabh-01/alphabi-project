@@ -22,7 +22,7 @@ export default function Login() {
     try {
       setLoading(true)
       await login(email, password)
-      router.push('/dashboard')
+      router.push("/dashboard")
     } catch (err) {
       console.log(err)
       if (err.code === "auth/wrong-password") {
@@ -66,7 +66,7 @@ export default function Login() {
           id="email"
           name="email"
         />
-        {formSubmitted && email === '' && <p className="pwd-msg">please enter email</p>}
+        {formSubmitted && email === "" && <p className="pwd-msg">please enter email</p>}
         {emailError && <p className="pwd-msg">{emailError}</p>}
         <label htmlFor="password">password</label>
         <input
@@ -77,8 +77,8 @@ export default function Login() {
           id="password"
           name="password"
         />
-        {formSubmitted && password.length < 6 && password !== '' && <p className="pwd-msg">password should be more than 6 characters</p>}
-        {formSubmitted && password === '' && <p className="pwd-msg">please enter password</p>}
+        {formSubmitted && password.length < 6 && password !== "" && <p className="pwd-msg">password should be more than 6 characters</p>}
+        {formSubmitted && password === "" && <p className="pwd-msg">please enter password</p>}
         {passwordError && <p className="pwd-msg">{passwordError}</p>}
 
         
