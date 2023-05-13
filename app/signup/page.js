@@ -48,14 +48,14 @@ export default function Signup() {
             <label htmlFor="email">email</label>
             <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
 
-            {formSubmitted && email === '' && <p className="pwd-msg">please enter email</p>}
+            {formSubmitted && email === "" && <p className="pwd-msg">please enter email</p>}
 
 
             <label htmlFor="password">password</label>
             <input value={password} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
 
             {formSubmitted && password.length < 6 && password !== '' && <p className="pwd-msg">password should be more than 6 characters</p>}
-        {formSubmitted && password === '' && <p className="pwd-msg">please enter password</p>}
+        {formSubmitted && password === "" && <p className="pwd-msg">please enter password</p>}
 
 
         {loading ? (

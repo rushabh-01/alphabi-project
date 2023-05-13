@@ -86,7 +86,7 @@ export default function Login() {
 
       </form>
       <Link href="/signup" className="link-btn">
-          Don't have an account? Register here.
+          Don&apos;t have an account? Register here.
       </Link>
       </>
 }
