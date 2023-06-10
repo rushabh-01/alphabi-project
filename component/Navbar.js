@@ -46,8 +46,8 @@ export default function Navbar() {
         <Image 
         src="/next.svg" 
         alt="" 
-        width={70}
-        height={70}
+        width={120}
+        height={120}
         />
         </Link>
         :

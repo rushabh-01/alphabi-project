@@ -7,7 +7,7 @@ export default function Searchbar() {
   const [query, setQuery] = useState("");
   const [gifData, setgifData] = useState([]);
   const [loading, setLoading] = useState(false); 
-
+  console.log(process.env.API_KEY)
 
   // handling search
 
